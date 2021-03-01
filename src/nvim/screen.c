@@ -3412,7 +3412,7 @@ static int win_line(win_T *wp, linenr_T lnum, int startrow, int endrow,
         if (wp->w_buffer->terminal) {
           char_attr = hl_combine_attr(term_attrs[vcol], char_attr);
         }
-	// TODO: is the c0 = c necessary?
+        // TODO(worldeva): is the c0 = c necessary?
         // Found last space before word: check for line break.
         if (wp->w_p_lbr && c0 == c && vim_isbreak(mb_c)
             && !vim_isbreak(utf_ptr2char(ptr))) {
